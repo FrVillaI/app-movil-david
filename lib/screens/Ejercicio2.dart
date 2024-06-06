@@ -38,15 +38,24 @@ class _HomeState extends State<Home> {
 
 Widget Cuerpo(context) {
   return Container(
+      
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/img2.jpg"),
-          fit: BoxFit.cover)
+          image: NetworkImage(
+              "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+          fit: BoxFit.cover,
+        ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text("Calcular la presion a la que es somito un submarino"),
+          const Text(
+            "Calcular la presion a la que es somito un submarino",
+            style: TextStyle(
+              fontSize: 24,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+          ),
           AlturaField(),
           BotonCalularP(context)
         ],
@@ -93,7 +102,7 @@ double Calcular() {
 }
 
 void AlertaEjercicio2(context) {
-  double presion=  Calcular();
+  double presion = Calcular();
   showDialog(
       context: context,
       builder: (context) {

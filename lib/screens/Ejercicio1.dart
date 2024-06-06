@@ -46,7 +46,12 @@ Widget Cuerpo(context) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text("Pruebas de velocidad de los vehículos "),
+          const Text("Pruebas de velocidad de los vehículos ",
+          style: TextStyle(
+              fontSize: 24,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+          ),
           VelocidadInicialField(),
           VelocidadFinalField(),
           BotonCalularP(context)

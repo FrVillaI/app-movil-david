@@ -38,24 +38,49 @@ class _HomeState extends State<Home> {
   }
 }
 
-Widget Cuerpo(context) {
+Widget Cuerpo(BuildContext context) {
   return Container(
-      decoration: const BoxDecoration(
+    width: double.infinity,
+      height: double.infinity,
+    decoration: const BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage("https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
-          fit: BoxFit.cover)
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text("Nombre:"),
-          const Text("Nombre: Villacis Isaac"),
-          const Text("Usuario GitHub:"),
-          const Text("Usuario GitHub: FrVillaI"),
-          BotonActions(context),
-          BotonContenidos(context)
-        ],
-      ));
+            image: AssetImage("assets/img2.jpg"), fit: BoxFit.cover)),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        const Text(
+          "Nombre",
+          style: TextStyle(
+            fontSize: 24,
+            color: Color.fromARGB(255, 0, 0, 0),
+          ),
+        ),
+        const Text(
+          "Villacis Isaac",
+          style: TextStyle(
+            fontSize: 24,
+            color: Color.fromARGB(255, 0, 0, 0),
+          ),
+        ),
+        const Text(
+          "Usuario GitHub",
+          style: TextStyle(
+            fontSize: 24,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
+        ),
+        const Text(
+          "FrVillaI",
+          style: TextStyle(
+            fontSize: 24,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
+        ),
+        BotonActions(context),
+        BotonContenidos(context)
+      ],
+    ),
+  );
 }
 
 Widget BotonActions(context) {
